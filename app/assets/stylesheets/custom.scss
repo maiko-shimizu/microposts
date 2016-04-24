@@ -5,6 +5,7 @@
 
 body {
   padding-top: 60px;
+  font-family: "メイリオ";
 }
 
 section {
@@ -105,3 +106,9 @@ input {
     color: $state-danger-text;
   }
 }
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+

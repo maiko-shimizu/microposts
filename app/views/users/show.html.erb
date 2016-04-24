@@ -1,4 +1,18 @@
+<%= link_to "プロフィール変更", edit_user_path, class: "btn btn-large btn-primary" %>
+
 <h1>
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Email</th>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <th>Area</th>
+      <td><%= @user.area %></td>
+    </tr>
+	</tbody>
+</table>
