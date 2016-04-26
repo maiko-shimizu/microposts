@@ -13,10 +13,12 @@
           <th>Email</th>
           <td><%= @user.email %></td>
         </tr>
-        <tr>
-          <th>Area</th>
-          <td><%= @user.area %></td>
-        </tr>
+        <% if @user.area.present? %>
+          <tr>
+            <th>Area</th>
+            <td><%= @user.area %></td>
+          </tr>
+        <% end %>
     	</tbody>
     </table>
   </div>
