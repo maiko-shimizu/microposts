@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
   
   def show
+    @microposts = @user.microposts.order(created_at: :desc)
   end
 
   def create
@@ -35,6 +36,9 @@ class UsersController < ApplicationController
   end
   
   private
+  def set_user
+    @user = User.find(params[:id])
+  end
   
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
@@ -42,10 +46,6 @@ class UsersController < ApplicationController
   
   def user_params_update
     params.require(:user).permit(:name, :email, :area, :password, :password_confirmation)
-  end
-
-  def set_user
-    @user = User.find(params[:id])
   end
   
   def correct_user

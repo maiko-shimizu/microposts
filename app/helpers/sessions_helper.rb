@@ -7,7 +7,7 @@ module SessionsHelper
     !!current_user
   end
 
-  def store_location
+  def store_location #現在のフルパス取得
     session[:forwarding_url] = request.url if request.get?
   end
 end
