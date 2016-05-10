@@ -4,6 +4,8 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <%= link_to "フォロー", followings_user_path %>
+        <%= link_to "フォロワー", followers_user_path %>
       </h1>
       
       <p><%= @user.area %></p>
