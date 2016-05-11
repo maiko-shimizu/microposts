@@ -7,6 +7,7 @@ class MicropostsController < ApplicationController
       flash[:success] = "Micropost created!"
       redirect_to root_url
     else
+      @user = current_user
       render 'static_pages/home'
     end
   end
